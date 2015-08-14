@@ -1,0 +1,166 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+
+html, body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-size: 1rem;
+  background: url('/img/bg.jpg');
+  background-size: cover;
+  font-family: "Open Sans", sans-serif;
+}
+
+body.on-scripting-view {
+  background-color: #000;
+  color: #eee;
+}
+
+button, input[type="text"], textarea {
+  font-size: 1rem;
+}
+
+#joystickArea {
+  height: 100%;
+  width: 100%;
+}
+
+#info {
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-top: 10px;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+#info .left, #info .right {
+  flex-grow: 1;
+  visibility: hidden;
+}
+
+#info .right {
+  text-align: right;
+}
+
+.toolbar {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  color: #dddddd;
+}
+
+.toolbar > button {
+  height: 25px;
+}
+
+#connect, #status {
+  float: right;
+}
+
+.half {
+  position: absolute;
+  width: calc(50% - 2rem);
+}
+
+.half > button {
+  font-size: 1rem;
+}
+
+#script {
+  width: 100%;
+  height: 70%;
+}
+
+#gist-id {
+  height: 2rem;
+  width: 60%;
+}
+
+.hidden {
+  display: none;
+}
+
+#turn-phone-over {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  display: none;
+  top: 0;
+}
+
+#turn-phone-over img {
+  transform: rotate(90deg);
+  display: block;
+  margin: 0 auto;
+  margin-top: 20vh;
+}
+
+#turn-phone-over p {
+  text-align: center;
+  font-weight: 300;
+  margin-top: -20px;
+}
+
+#action-bar {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+}
+
+#takeoff, #landing {
+  background: rgba(116, 175, 15, 0.9);
+  border: none;
+  font-weight: 700;
+  color: white;
+  padding: 0 40px;
+}
+
+#landing {
+  display: none;
+}
+
+body.flying #landing {
+  display: block;
+}
+
+body.flying #takeoff {
+  display: none;
+}
+
+#joystick-view {
+  z-index: 10;
+}
+.toolbar {
+  z-index: 90;
+}
+
+#connect, #frontFlip {
+  border: medium none;
+  background: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.2rem;
+  flex-grow: 1;
+  width: 100px;
+}
+
+#frontFlip {
+  text-align: left;
+  margin-left: 10px;
+}
+
+#connect {
+  text-align: right;
+  margin-right: 10px;
+}

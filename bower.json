@@ -1,0 +1,8 @@
+{
+    "name": "RollingSpider",
+    "version": "1.0.0",
+    "dependencies": {
+        "virtualjoystick.js": "*",
+        "evt": "gaia-components/evt#~0.4.0"
+    }
+}
